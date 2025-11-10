@@ -1,6 +1,6 @@
 # Zarina CRM Dubai – Advanced CRM Software in Dubai, UAE
 
-**[Zarina CRM Dubai](https://www.zarinacrm.ae)** is a modern, fully customizable **CRM Software in Dubai** designed to help businesses streamline sales, customer management, and daily operations.  
+**Zarina CRM Dubai** is a modern, fully customizable **[CRM Software in Dubai](https://www.zarinacrm.ae)** designed to help businesses streamline sales, customer management, and daily operations.  
 Built for small and medium enterprises in the UAE, Zarina CRM offers an intuitive interface and smart automation tools that simplify every stage of client relationship management.
 
 ---
