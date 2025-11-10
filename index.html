@@ -1,23 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic Meta -->
   <meta charset="UTF-8" />
-  <meta name="description" content="Zarina CRM Dubai – Smart and customizable CRM Software in Dubai, UAE.">
-  <meta name="keywords" content="CRM Software Dubai, Zarina CRM, Customer Management UAE, Business Automation CRM, CRM Dubai">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zarina CRM Dubai – CRM Software in Dubai, UAE</title>
+  <title>Zarina CRM Dubai – CRM Software in Dubai, UAE | Customer Management & Automation</title>
+  <meta name="description" content="Zarina CRM Dubai is a modern, customizable CRM Software in Dubai, UAE. Manage leads, customers, offers, tasks, payments, and reports in one centralized CRM platform. Visit www.zarinacrm.ae." />
+  <meta name="keywords" content="CRM Software in Dubai, Zarina CRM Dubai, CRM Dubai, Customer Relationship Management UAE, Business Automation, Lead Management CRM, Client Management Dubai" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Zarina CRM Dubai – CRM Software in Dubai, UAE" />
+  <meta property="og:description" content="Smart and customizable CRM solution for businesses in Dubai and across the UAE. Centralize leads, customers, offers, payments and reports.">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.zarinacrm.ae" />
+  <meta property="og:site_name" content="Zarina CRM Dubai" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Zarina CRM Dubai – CRM Software in Dubai, UAE" />
+  <meta name="twitter:description" content="Customer relationship management software for UAE businesses. Lead management, sales tracking, reports, automation." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.zarinacrm.ae" />
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="https://www.zarinacrm.ae/favicon.ico" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zarina CRM Dubai",
+    "url": "https://www.zarinacrm.ae",
+    "logo": "https://www.zarinacrm.ae/logo.png",
+    "description": "Zarina CRM Dubai delivers advanced CRM Software in Dubai, UAE, helping companies manage customers, automate sales, and centralize documents.",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "info@zarinacrm.ae"
+    }],
+    "sameAs": [
+      "https://www.zarinacrm.ae"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --light-bg: #f4f6fb;
+      --accent: #0ea5e9;
+      --text: #0f172a;
+      --muted: #6b7280;
+      --radius: 18px;
+      --max: 1100px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: radial-gradient(circle, #0f172a 0%, #020617 55%, #020617 100%);
+      color: #fff;
+      padding: 3.2rem 1.5rem 3.5rem;
+    }
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+      gap: 1rem;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: .03em;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.4rem;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 2.8rem);
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1rem;
+      color: #e2e8f0;
+      margin-bottom: 1.5rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #fff;
+      color: #020617;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.3);
+      transition: transform .1s ease-in-out;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+    }
+    .hero-card {
+      background: rgba(15, 23, 42, 0.28);
+      border: 1px solid rgba(148, 163, 184, 0.32);
+      border-radius: 16px;
+      padding: 1.5rem;
+      color: #e2e8f0;
+    }
+    .hero-card h2 {
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: .8rem;
+    }
+    section {
+      padding: 3.5rem 1.5rem 0;
+    }
+    .section-title {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .muted {
+      color: var(--muted);
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.8rem;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius);
+      padding: 1.3rem 1.2rem 1.2rem;
+      transition: box-shadow .15s ease-in-out;
+    }
+    .card:hover {
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+    }
+    .badge {
+      display: inline-block;
+      font-size: .7rem;
+      background: rgba(14, 165, 233, .08);
+      color: var(--accent);
+      padding: .35rem .7rem;
+      border-radius: 999px;
+      margin-bottom: .4rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      font-weight: 600;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.6rem;
+      align-items: flex-start;
+    }
+    .faq-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 1rem 1rem 0.4rem;
+      margin-bottom: 1rem;
+    }
+    footer {
+      margin-top: 3.5rem;
+      background: #0f172a;
+      color: #cbd5f5;
+      padding: 2.5rem 1.5rem 2.5rem;
+      text-align: center;
+    }
+    a { color: var(--accent); }
+    @media (max-width: 960px) {
+      .hero, .grid-3, .two-col {
+        grid-template-columns: 1fr;
+      }
+      header {
+        padding-top: 2.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Zarina CRM Dubai – Advanced CRM Software in Dubai, UAE</h1>
-  <p>
-    Zarina CRM is a modern <strong>CRM Software in Dubai</strong> that helps businesses manage clients, automate workflows, and improve sales performance.
-  </p>
-  <p>
-    Visit our official website:
-    <a href="https://www.zarinacrm.ae">www.zarinacrm.ae</a>
-  </p>
-  <footer>
-    <p>© 2025 Zarina CRM Dubai – All Rights Reserved.</p>
-  </footer>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Zarina CRM Dubai</div>
+      <a class="btn-primary" href="https://www.zarinacrm.ae" target="_blank" rel="noopener">Visit website</a>
+    </nav>
+    <div class="hero">
+      <div>
+        <h1>CRM Software in Dubai, UAE – Zarina CRM Dubai</h1>
+        <p>
+          Centralize customer data, automate sales workflows, manage offers and payments, and generate advanced reports —
+          all in one secure CRM platform tailored for businesses in Dubai and across the UAE.
+        </p>
+        <a class="btn-primary" href="https://www.zarinacrm.ae" target="_blank" rel="noopener">Visit www.zarinacrm.ae</a>
+      </div>
+      <div class="hero-card">
+        <h2>Business-ready CRM Modules</h2>
+        <p style="margin-bottom: .8rem;">Lead management, client management, documents, payment tracking, offers, tasks, and helpdesk.</p>
+        <p style="font-size:.8rem;color:#94a3b8;">Optimized for Dubai-based companies that need visibility, speed, and traceability.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <p class="badge">About Zarina CRM Dubai</p>
+      <h2 class="section-title">Smart, customizable CRM software for UAE companies</h2>
+      <p class="muted" style="max-width: 720px;">
+        Zarina CRM Dubai is designed to help organizations manage the entire customer lifecycle — from capturing leads to
+        generating offers, tracking activities, registering documents, and analyzing performance. The platform is
+        flexible enough to be configured by industry and by internal workflow.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="container">
+      <p class="badge">Core CRM Features</p>
+      <h2 class="section-title">What you can do with Zarina CRM Software in Dubai</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Lead & Deal Management</h3>
+          <p class="muted">
+            Capture leads from multiple sources, qualify them, and convert them into deals with automatic follow-up reminders.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Customer 360° View</h3>
+          <p class="muted">
+            Keep all client data in one place — contacts, documents, history, invoices, and support requests.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Offer & Document Automation</h3>
+          <p class="muted">
+            Generate proposals, contracts, and custom documents directly from CRM with predefined templates.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Task & Team Management</h3>
+          <p class="muted">
+            Assign activities to your team, monitor completion, and get calendar views for better planning.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Payment & Order Tracking</h3>
+          <p class="muted">
+            Track client payments, integrate sales records, and keep management updated on revenue.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Advanced Reports</h3>
+          <p class="muted">
+            Visualize performance per client, per sales rep, per product, or per time period for better decisions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries / Use cases -->
+  <section id="industries">
+    <div class="container">
+      <p class="badge">Built for Dubai business environment</p>
+      <h2 class="section-title">Who uses Zarina CRM in Dubai?</h2>
+      <div class="two-col" style="margin-top:1.5rem;">
+        <div>
+          <p class="muted">
+            The CRM software can be adapted for service-based companies, trading and distribution, maintenance and facilities,
+            real estate, training centers, and other UAE-based organizations that need clear client tracking.
+          </p>
+          <ul class="muted">
+            <li>Service providers and agencies</li>
+            <li>Real estate and property management</li>
+            <li>Technical services and maintenance</li>
+            <li>Medical / clinics (non-medical CRM layer)</li>
+            <li>Professional B2B services</li>
+          </ul>
+        </div>
+        <div class="card" style="background:#f8fafc;">
+          <h3 style="margin-top:0;">Why Dubai companies choose Zarina CRM?</h3>
+          <p class="muted" style="margin-bottom:.5rem;">Because it is:</p>
+          <ul class="muted">
+            <li>Cloud-based and secure</li>
+            <li>Fast to implement</li>
+            <li>Customizable by module</li>
+            <li>Easy to train users</li>
+            <li>Supported locally in the region</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <p class="badge">FAQ</p>
+      <h2 class="section-title">Frequently asked questions about Zarina CRM Dubai</h2>
+      <div class="two-col" style="margin-top:1.5rem;">
+        <div>
+          <div class="faq-item">
+            <h3>Is Zarina CRM a cloud CRM?</h3>
+            <p class="muted">Yes. It is accessible from modern browsers and can be used by teams working from Dubai or remotely.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can we customize fields and modules?</h3>
+            <p class="muted">Yes. The CRM was built to be configurable per company, so you can add fields, document types, and workflows.</p>
+          </div>
+        </div>
+        <div>
+          <div class="faq-item">
+            <h3>Is Zarina CRM only for Dubai?</h3>
+            <p class="muted">No. It is optimized for businesses in Dubai and the UAE, but it can be used by international teams as well.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Where can I see the full presentation?</h3>
+            <p class="muted">
+              On the official website:
+              <a href="https://www.zarinacrm.ae" target="_blank" rel="noopener">https://www.zarinacrm.ae</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact">
+    <div class="container" style="margin-top:3rem;">
+      <div class="card" style="background:linear-gradient(110deg,#0ea5e9 0%,#0369a1 95%);color:#fff;text-align:center;">
+        <h2 style="margin-top:.5rem;">Ready to see Zarina CRM Dubai in action?</h2>
+        <p style="max-width:540px;margin:0 auto 1.2rem;">
+          Request a demo or visit the official website to discover all CRM modules, integrations, and automation options for your business.
+        </p>
+        <a class="btn-primary" href="https://www.zarinacrm.ae" target="_blank" rel="noopener" style="background:#fff;color:#020617;">Go to www.zarinacrm.ae</a>
+        <p style="font-size:.7rem;margin-top:1rem;opacity:.8;">Link dofollow către website-ul oficial Zarina CRM Dubai.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Zarina CRM Dubai – CRM Software in Dubai, UAE</p>
+  <p><a href="https://www.zarinacrm.ae" target="_blank" rel="noopener" style="color: #e2e8f0;">https://www.zarinacrm.ae</a></p>
+  <p style="font-size:.7rem;opacity:.7;">© 2025 Zarina CRM Dubai. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
